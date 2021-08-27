@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 let helpO=require("./commands/help");
 let treeO=require("./commands/tree")
 let organizeO=require("./commands/organizer")

@@ -1,0 +1,22 @@
+{
+  "name": "file_organizer",
+  "version": "1.0.0",
+  "description": "• A global command line application using Node.js.",
+  "main": "fo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanchitBRO/File_Manager.git"
+  },
+  "author": "",
+  "bin": {
+    "fo": "fo.js"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SanchitBRO/File_Manager/issues"
+  },
+  "homepage": "https://github.com/SanchitBRO/File_Manager#readme"
+}
