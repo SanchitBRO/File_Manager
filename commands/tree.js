@@ -1,24 +1,19 @@
 let fs=require('fs');
 let path=require("path");
-function treeFn(srcPath){
-
-    let content=fs.readdirSync(srcPath);
-    let allEntities="";
-    for(let i=0;i<content.length;i++){
-        let files=content[i];
-        let filesPath=path.join(srcPath,files);
-        let status=fs.lstatSync(filesPath);
-        if (status.isFile()){
-            allEntities+='\n\t'+"├──"+content[i];
-        }
-        if(status.isDirectory()){
-            treeFn(filesPath)
+function treeFn(dirPath,x){
+    let isFile = fs.lstatSync(dirPath).isFile();
+    if (isFile == true) {
+        let fileName = path.basename(dirPath);
+        console.log(x + "├──" + fileName);
+    } else {
+        let dirName = path.basename(dirPath)
+        console.log(x + "└──" + dirName);
+        let childrens = fs.readdirSync(dirPath);
+        for (let i = 0; i < childrens.length; i++) {
+            let childPath = path.join(dirPath, childrens[i]);
+            treeFn(childPath, x + "\t");
         }
     }
-    let baseName=path.basename(srcPath);
-    console.log(baseName);
-    console.log("\t"+"└──");
-    console.log(allEntities+"\n");
     
 }
 module.exports={

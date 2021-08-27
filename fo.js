@@ -11,7 +11,7 @@ switch(command){
         helpO.help();
         break;
     case "tree":
-        treeO.tree(path);
+        treeO.tree(path, "");
         break;
     case "organize":
         organizeO.organize(path);
