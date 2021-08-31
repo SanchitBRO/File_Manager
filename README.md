@@ -1,7 +1,7 @@
 
 #  💻 File Organizer 💻
 
-• A global command line application using Node.js. 
+• A global command line interface (CLI) application created using Node.js.
 
 • It organizes all your files from from a folder into different section  so that you need not to do it manually.
 
